@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalClass.MainPage">
+
+    <Grid BackgroundColor="{StaticResource Tertiary}" 
+          RowSpacing="2" ColumnSpacing="2"
+          RowDefinitions="2*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*" 
+          Margin="6">
+
+        <Label x:Name="CurrentCalculation" Text=""
+               HorizontalTextAlignment="End" VerticalTextAlignment="Start"
+               LineBreakMode="NoWrap" FontSize="22" Grid.Row="0" 
+               Grid.ColumnSpan="4"/>
+
+        <Label x:Name="resultText" Text="0"
+               HorizontalTextAlignment="End" VerticalTextAlignment="End"
+               LineBreakMode="NoWrap" FontSize="64"
+               Grid.ColumnSpan="4"/>
+
+        <BoxView BackgroundColor="{StaticResource Secondary}" 
+                 VerticalOptions="End" Grid.Row="0" Grid.ColumnSpan="4"
+                 HeightRequest="1"/>
+
+        <Button Text="C" Grid.Row="1" Grid.Column="0"
+                Clicked="OnClear" />
+        <Button Text="+/-" Grid.Row="1" Grid.Column="1" 
+               Clicked="OnNegative"/>
+        <Button Text="%" Grid.Row="1" Grid.Column="2"
+                Clicked="OnPercentage"/>
+
+        <Button Text="7" Grid.Row="2" Grid.Column="0"
+                Clicked="OnSelectedNumber"/>
+        <Button Text="8" Grid.Row="2" Grid.Column="1"
+               Clicked="OnSelectedNumber"/>
+        <Button Text="9" Grid.Row="2" Grid.Column="2"
+                Clicked="OnSelectedNumber"/>
+
+        <Button Text="4" Grid.Row="3" Grid.Column="0"
+               Clicked="OnSelectedNumber"/>
+        <Button Text="5" Grid.Row="3" Grid.Column="1"
+                Clicked="OnSelectedNumber"/>
+        <Button Text="6" Grid.Row="3" Grid.Column="2"
+               Clicked="OnSelectedNumber"/>
+
+        <Button Text="1" Grid.Row="4" Grid.Column="0"
+               Clicked="OnSelectedNumber"/>
+        <Button Text="2" Grid.Row="4" Grid.Column="1"
+                Clicked="OnSelectedNumber"/>
+        <Button Text="3" Grid.Row="4" Grid.Column="2"
+                Clicked="OnSelectedNumber"/>
+
+        <Button Text="00" Grid.Row="5" Grid.Column="0"
+                Clicked="OnSelectedNumber"/>
+        <Button Text="0" Grid.Row="5" Grid.Column="1"
+                Clicked="OnSelectedNumber"/>
+        <Button Text="." Grid.Row="5" Grid.Column="2"
+                Clicked="OnComma"/>
+
+        <Button Text="÷" Grid.Row="1" Grid.Column="3"
+               Clicked="OnSelectOperator"/>
+        <Button Text="-" Grid.Row="2" Grid.Column="3"
+                Clicked="OnSelectOperator"/>
+        <Button Text="+" Grid.Row="3" Grid.Column="3"
+               Clicked="OnSelectOperator"/>
+        <Button Text="x" Grid.Row="4" Grid.Column="3" 
+               Clicked="OnSelectOperator"/>
+
+        <Button Text="=" Grid.Row="5" Grid.Column="3"
+                Clicked="OnCalculate"/>
+
+
+    </Grid>
+
+</ContentPage>
